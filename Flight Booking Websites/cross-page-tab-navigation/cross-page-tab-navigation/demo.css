@@ -1,0 +1,26 @@
+/**
+ * Demo of jquery.simpletabs jQuery plugin: Style of demo pages
+ * @version    1.2.3
+ * @release    2022-02-22
+ * @repository https://github.com/peterthoeny/jquery.simpletabs
+ * @author     Peter Thoeny, https://twiki.org/ & https://github.com/peterthoeny
+ * @copyright  2021-2022 Peter Thoeny, https://github.com/peterthoeny
+ * @license    MIT, https://opensource.org/licenses/mit-license
+ */
+
+body {
+    padding: 3px 10px;
+    background-color: #ffffff;
+    font-family: "helvetica"; 
+    color: #000000;
+}
+h1 { font-size: 2em; color: #000000; margin: 3px 0 10px 0; }
+h2 { font-size: 1.2em; color: #000000; margin: 3px 0 10px 0; }
+hr { border: 0; border-bottom: 1px solid #aaa; }
+textarea {
+    color: white;
+    background-color: #333;
+    padding: 3px 3px;
+}
+
+/* EOF */

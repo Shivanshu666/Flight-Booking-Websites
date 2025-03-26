@@ -1,0 +1,1226 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* /////////////////////// */
+main {
+  padding: 20px;
+}
+
+.flight-list {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: absolute;
+
+  margin-top: 40px;
+  left: 50px;
+}
+#active {
+  margin: 0;
+  color: black;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #0c0b0b;
+  color: black;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #35424a;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #35424a;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+#new-user {
+  border: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+/* ///////////////////////////////////// */
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(img--1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 500px;
+  cursor: pointer;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #13a9ff;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.content h1 {
+  font-size: 70px;
+  margin-top: 80px;
+}
+
+.content p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+.login-btn {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #005a96;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-btn {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #005a96;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover {
+  background: #0b8ffc;
+  height: 100%;
+  width: 0%;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
+}
+
+/* // Day nd Night  */
+/* #sun,#moon{
+ position: absolute;
+ top: 12px;
+ left: 13px;
+}
+#sun{
+  color: yellow;
+  margin-top: 0%;
+}
+#moon{
+  margin-top: 30px;
+  color: white;
+}
+#toggle{
+  display: none;
+}
+label{
+  width: 80px;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 999px;
+  box-shadow: 1px 1px 2px grey inset;
+}
+.circle{
+  border-radius: 99px;
+  background-color: #ec2fe3;
+  height: 25px;
+  width:50px
+}
+input[type=checkbox]:checked + .display{
+  background-color: black; */
+/* } */
+
+/* /////////////////////////////// */
+
+#img-1 {
+  width: 160px;
+  position: absolute;
+  left: 230px;
+  top: 5px;
+}
+#img-2 {
+  width: 160px;
+  position: absolute;
+  left: 230px;
+  top: 35px;
+  border-radius: 50%;
+}
+#img-3 {
+  width: 160px;
+  position: absolute;
+  left: 230px;
+  top: 25px;
+}
+.box {
+  background-color: rgb(0, 132, 255);
+  height: 290px;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  color: rgb(190, 190, 190);
+  justify-content: space-around;
+  /* gap: 30px; */
+  padding: 20px;
+  font-size: medium;
+}
+.trip {
+  display: flex;
+  align-items: flex-start;
+  /* flex-wrap: wrap; */
+  gap: 30px;
+}
+#top-f-r {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-image: url(india.png);
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+}
+.low {
+  font-size: 2.8rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  color: white;
+}
+.div {
+  height: 120px;
+  /* display: flex; */
+  width: 70%;
+  background-color: rgb(248, 247, 247);
+  z-index: 1;
+  position: absolute;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  top: 250px;
+}
+#exe {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  margin-left: 40%;
+}
+#exr {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  margin-left: 40%;
+}
+
+#offer {
+  justify-content: center;
+  margin-right: 40px;
+  font-size: 17px;
+  border-radius: 15px;
+  color: black;
+
+  /* display: flex;
+    gap: 55 */
+}
+#off-2 {
+  color: black;
+}
+#off-2:hover {
+  background-color: rgb(78, 155, 255);
+  cursor: pointer;
+  color: white;
+  border-radius: 15px;
+  transition: 0.001s;
+}
+.peo {
+  position: absolute;
+  top: 400px;
+  left: 300px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#h1,
+#h2,
+#h3 {
+  border: none;
+  background-color: rgb(0, 132, 255);
+  color: rgb(179, 179, 179);
+  font-size: 1.1rem;
+}
+#h1:hover,
+#h2:hover,
+#h3:hover {
+  border: 2px solid white;
+  background-color: aliceblue;
+  border-radius: 20px;
+  color: rgb(0, 132, 255);
+  height: 30px;
+  /* transition: 00.1s; */
+  /* padding: 1px; */
+}
+.card {
+  width: 450px;
+  height: 200px;
+  background-color: transparent;
+  box-shadow: 1px 1px 15px rgb(211, 209, 209);
+}
+#card-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+  justify-content: center;
+}
+.card #card-1 {
+  background-image: linear-gradient(to right, rgb(21, 135, 241), aqua);
+  color: white;
+}
+.card #card-2 {
+  /* background-image: linear-gradient(to right, rgb(92, 13, 129), rgb(36, 49, 110)); */
+  background-image: url("./card-imge/card-2.png");
+  background-size: cover;
+  /* background-size:auto  */
+  background-position: center;
+  background-position-x: left;
+  color: white;
+}
+.card #card-3 {
+  background-image: linear-gradient(
+    to right,
+    rgba(243, 121, 21, 0.849),
+    rgba(235, 238, 39, 0.87)
+  );
+
+  color: white;
+}
+.card #card-4 {
+  background-image: linear-gradient(to right, red, orange);
+
+  color: white;
+}
+
+.card:hover {
+  translate: -0% -2%;
+  transition: 0.3s;
+}
+.card .card-text #code {
+  border: 2px dashed white;
+  width: 90px;
+  padding: 5px;
+  font-size: 0.9rem;
+  background-color: rgb(22, 118, 196);
+  border-radius: 10px;
+  text-align: center;
+}
+.view {
+  text-align: center;
+  justify-content: center;
+}
+#vao {
+  border: none;
+  background-color: rgb(78, 155, 255);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1.1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  margin: 30px auto;
+  text-align: center;
+  width: 180px;
+  margin: 10px auto;
+}
+#vao:hover {
+  cursor: pointer;
+  background-color: rgb(6, 68, 182);
+}
+
+#item:hover {
+  cursor: pointer;
+  background-color: rgb(199, 207, 211);
+  border-radius: 10px;
+}
+#bann1 {
+  width: 150px;
+  height: 100px;
+}
+#banner-box {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#bann2 {
+  width: 150px;
+  height: 100px;
+}
+#bann2-text {
+  position: absolute;
+  top: 25px;
+  left: 155px;
+}
+#bann1-text {
+  position: absolute;
+  top: 25px;
+  left: 155px;
+  font-size: 0.9rem;
+}
+#banner {
+  width: 700px;
+  height: 140px;
+  background-image: linear-gradient(
+    to right,
+    rgb(41, 142, 236),
+    rgb(70, 146, 70)
+  );
+  color: white;
+  border-radius: 15px;
+}
+#banner1 {
+  width: 380px;
+  height: 140px;
+  background-image: linear-gradient(
+    to right,
+    rgb(162, 36, 179),
+    rgb(206, 43, 43)
+  );
+  color: white;
+  border-radius: 15px;
+}
+#banner2 {
+  width: 600px;
+  height: 100px;
+  border-radius: 30px 0px;
+}
+#banner3 {
+  width: 600px;
+  height: 100px;
+  border-radius: 30px 0px;
+}
+
+.b1 {
+  background-image: linear-gradient(
+    to right,
+    rgb(31, 191, 255),
+    rgb(79, 184, 110)
+  );
+  flex-basis: 39%;
+  height: 120px;
+  border-radius: 20px;
+}
+.b2 {
+  background-image: linear-gradient(to right, #ec2fe3, rgb(255, 18, 18));
+  flex-basis: 15%;
+  height: 120px;
+  border-radius: 20px;
+}
+#tfr {
+  border: none;
+  box-shadow: none;
+  width: 600px;
+  margin-top: 10px;
+  height: 100px;
+  background-color: transparent;
+}
+#top-1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+}
+#tfr:hover {
+  background-color: rgb(204, 204, 204);
+  border-radius: 15px;
+}
+#attraction-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+#fta {
+  justify-content: center;
+  text-align: center;
+  width: 600px;
+  box-shadow: none;
+  border: none;
+}
+#fta-img {
+  height: 150px;
+  width: 150px;
+}
+#tfr-tt {
+  color: rgb(0, 102, 255);
+}
+#tfr-text {
+  position: absolute;
+  top: 5px;
+  left: 100px;
+  font-size: 2rem;
+}
+#poster {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+#post1 {
+  height: 70px;
+  width: 70px;
+}
+#poster-bann {
+  position: absolute;
+  top: 5px;
+  left: 115px;
+}
+
+/* // fresh travel blog */
+
+#travel-blog-1 {
+  background-image: url(g1.png);
+  background-size: contain;
+  background-position: center;
+  border: none;
+  height: 230px;
+  width: 280px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#travel-blog-2 {
+  background-image: url(g2.png);
+  background-size: contain;
+  background-position: center;
+  border: none;
+  height: 230px;
+  width: 280px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#travel-blog-3 {
+  background-image: url(g3.png);
+  background-size: contain;
+  background-position: center;
+  border: none;
+  height: 230px;
+  width: 280px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#travel-blog-4 {
+  background-image: url(g4.png);
+  background-size: contain;
+  background-position: center;
+  border: none;
+  height: 230px;
+  width: 280px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#travelB-top {
+  background-color: rgb(0, 140, 255);
+  color: white;
+  width: 160px;
+  text-align: center;
+  border-radius: 15px;
+}
+#travelB-title {
+  color: white;
+  position: absolute;
+  top: 120px;
+  font-size: 1.1rem;
+}
+#travelB-text {
+  color: rgb(12, 12, 12);
+  position: absolute;
+  left: 100px;
+  top: 191px;
+  font-size: 1rem;
+
+  /* background-color: #005a96; */
+  width: 150px;
+  /* filter: blur(5px); */
+  /* background-color: transparent; */
+  /* filter: blur(20px); */
+}
+#Blur {
+  height: 35px;
+  width: 240px;
+  background-color: white;
+  border-radius: 10px;
+  filter: blur(5px);
+  top: 186px;
+  position: absolute;
+  padding: none;
+}
+
+#book-container {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+}
+#book-us {
+  height: 210px;
+  width: 250px;
+  border: 2px solid orangered;
+  padding: 10px;
+}
+#book-img {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 30px;
+  left: 90px;
+}
+#book-title {
+  position: absolute;
+  top: 110px;
+  font-size: 18px;
+  left: 80px;
+}
+#book-text {
+  position: absolute;
+  top: 135px;
+  font-size: 14px;
+}
+
+#pack {
+  background-color: rgb(238, 236, 236);
+  margin-top: 35px;
+  padding: 15px;
+}
+#packages {
+  text-align: center;
+}
+#text-1 {
+  text-align: justify;
+  font-size: 14px;
+}
+.footer {
+  background-color: black;
+  color: white;
+  padding: 25px;
+  margin-top: 25px;
+}
+#foot {
+  display: flex;
+  justify-content: space-between;
+}
+#foot-text {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.con-3 {
+  display: flex;
+}
+.con-in {
+  width: 70%;
+}
+#app {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+#copy-right {
+  display: flex;
+  justify-content: space-between;
+}
+#foot-img {
+  width: 700px;
+}
+/* /////////////////////////  Media Quries ///////////////////////////// */
+/* mobile */
+/* //////////////////////////////////////////////////////// */
+
+@media (max-width: 1024px) {
+  body {
+    text-align: center;
+  }
+
+  #flight {
+    font-size: 18px;
+  }
+  #card-box {
+    justify-content: center;
+  }
+  #banner-box {
+    justify-content: center;
+  }
+  #banner1 {
+    width: 75%;
+  }
+  #bann2-text {
+    left: 220px;
+  }
+  #top-f-r {
+    justify-content: center;
+  }
+  #poster {
+    justify-content: center;
+  }
+  #attraction-box {
+    justify-content: center;
+  }
+  #fta {
+    width: 300px;
+  }
+  .view {
+    text-align: center;
+  }
+  #book-container {
+    justify-content: center;
+  }
+  #book-us {
+    justify-content: center;
+    height: 225px;
+  }
+  #book-title {
+    left: 35px;
+  }
+  #book-img {
+    background-position: center;
+  }
+  #foot-img {
+    width: 400px;
+  }
+}
+
+/* //////////////////////////////////////////////////// */
+@media (max-width: 576px) {
+  #img-1 {
+    display: none;
+  }
+  #img-2 {
+    display: none;
+  }
+  #img-3 {
+    display: none;
+  }
+
+  #exe {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  #offer {
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 12px;
+    border-radius: 15px;
+    color: black;
+    gap: none;
+  }
+  #off-2 {
+    color: black;
+  }
+  #off-2:hover {
+    background-color: rgb(78, 155, 255);
+    cursor: pointer;
+    color: white;
+    border-radius: 15px;
+    transition: 0.001s;
+  }
+  .peo {
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  #h1,
+  #h2,
+  #h3 {
+    border: none;
+    background-color: rgb(0, 132, 255);
+    color: rgb(179, 179, 179);
+    font-size: 0.8rem;
+  }
+  #h1:hover,
+  #h2:hover,
+  #h3:hover {
+    border: 2px solid white;
+    background-color: aliceblue;
+    border-radius: 20px;
+    color: rgb(0, 132, 255);
+    height: 20px;
+    font-size: 0.7rem;
+  }
+  .card {
+    width: 250px;
+    height: 130px;
+
+    box-shadow: 1px 1px 15px rgb(211, 209, 209);
+  }
+  .card #card-1 {
+    background-image: url("img1.png");
+    color: white;
+  }
+  .card #card-2 {
+    background-image: url("./card-imge/card-2.png");
+    background-size: cover;
+    background-position: center;
+    background-position-x: left;
+    color: white;
+  }
+  .card #card-3 {
+    background-image: url("img-2.png");
+
+    color: white;
+  }
+  .card #card-4 {
+    background-image: url("img-3.png");
+
+    color: white;
+  }
+
+  .card:hover {
+    translate: -0% -2%;
+    transition: 0.3s;
+  }
+  .card .card-text #code {
+    border: 2px dashed white;
+    width: 90px;
+    padding: 5px;
+    font-size: 0.9rem;
+    background-color: rgb(22, 118, 196);
+    border-radius: 10px;
+    text-align: center;
+  }
+  #vao {
+    border: none;
+    background-color: rgb(78, 155, 255);
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: white;
+    margin: 30px auto;
+    width: 140px;
+  }
+  #vao:hover {
+    cursor: pointer;
+    background-color: rgb(6, 68, 182);
+  }
+  #item:hover {
+    cursor: pointer;
+    background-color: rgb(199, 207, 211);
+    border-radius: 10px;
+  }
+  #banner {
+    width: 700px;
+    height: 90px;
+    background-image: linear-gradient(
+      to right,
+      rgb(41, 142, 236),
+      rgb(70, 146, 70)
+    );
+    color: white;
+    border-radius: 15px;
+  }
+  #banner1 {
+    width: 700px;
+    height: 100px;
+    background-image: linear-gradient(
+      to right,
+      rgb(162, 36, 179),
+      rgb(206, 43, 43)
+    );
+    color: white;
+    border-radius: 15px;
+  }
+  #banner2 {
+    width: 600px;
+    height: 80px;
+    border-radius: 30px 0px;
+  }
+  #banner3 {
+    width: 600px;
+    height: 80px;
+    border-radius: 30px 0px;
+  }
+
+  .b1 {
+    background-image: linear-gradient(
+      to right,
+      rgb(31, 191, 255),
+      rgb(79, 184, 110)
+    );
+    flex-basis: 39%;
+    height: 120px;
+    border-radius: 20px;
+  }
+  #bann1 {
+    width: 100px;
+    height: 70px;
+  }
+  #bann1-text {
+    position: absolute;
+    top: 15px;
+    left: 130px;
+    font-size: 0.7rem;
+  }
+  #bann2 {
+    width: 100px;
+    height: 70px;
+  }
+  #bann2-text {
+    position: absolute;
+    top: 5px;
+    left: 155px;
+    font-size: 0.7rem;
+  }
+  .b2 {
+    background-image: linear-gradient(to right, #ec2fe3, rgb(255, 18, 18));
+    flex-basis: 15%;
+    height: 120px;
+    border-radius: 20px;
+  }
+  #top-f-r {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #tfr {
+    border: none;
+    box-shadow: none;
+    width: 500px;
+    margin-top: 10px;
+    background-color: rgb(223, 221, 221);
+    border-radius: 20px;
+    height: 80px;
+  }
+  #top-1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+  }
+  #tfr:hover {
+    background-color: rgb(180, 180, 180);
+    border-radius: 15px;
+  }
+  #fta {
+    justify-content: center;
+    text-align: center;
+    width: 150px;
+    box-shadow: none;
+    border: none;
+  }
+  #fta-img {
+    height: 100px;
+    width: 100px;
+  }
+  #tfr-text {
+    position: absolute;
+    top: -5px;
+    left: 100px;
+    font-size: 1rem;
+  }
+  #fta-text {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  #tfr-tt {
+    color: rgb(0, 102, 255);
+  }
+  #poster {
+    display: flex;
+    gap: 5px;
+  }
+  #post1 {
+    height: 60px;
+    width: 70px;
+  }
+  #poster-bann {
+    position: absolute;
+    top: 0px;
+    left: 115px;
+  }
+}
+
+/* ///////////////////////////////////////////////////////// */
+@media (max-width: 767px) {
+  #banner1 {
+    width: 100%;
+    height: 150px;
+  }
+  #banner {
+    height: 150px;
+  }
+  #bann2-text {
+    top: 20px;
+  }
+  #bann2 {
+    top: 20px;
+  }
+  #book-container {
+    flex-wrap: wrap;
+  }
+  #book-us {
+    width: 240px;
+  }
+  #travel-blog-1,
+  #travel-blog-2,
+  #travel-blog-3,
+  #travel-blog-4 {
+    width: 100%;
+    height: 300px;
+  }
+  #travelB-top {
+    font-size: 25px;
+    width: 250px;
+  }
+  #travelB-title {
+    font-size: 25px;
+  }
+  #travelB-text {
+    top: 227px;
+    font-size: 25px;
+    left: 65px;
+  }
+  #Blur {
+    top: 220px;
+    height: 50px;
+  }
+  #travelB-title {
+    top: 150px;
+  }
+  #vao {
+    height: 70px;
+    font-size: 20px;
+  }
+  .low {
+    font-size: 29px;
+  }
+  #exr {
+    margin-right: 200px;
+    font-size: 25px;
+  }
+  #exe {
+    font-size: 25px;
+  }
+  #attraction-box {
+    justify-content: center;
+  }
+  .flight-list {
+    display: none;
+  }
+}
+
+/* /////////////////////////////////////////// */
+@media (max-width: 991px) {
+  #banner1 {
+    width: 100%;
+    height: 110px;
+  }
+  #bann2-text {
+    font-size: 12px;
+    top: 10px;
+  }
+  #bann2 {
+    position: absolute;
+    top: 10px;
+  }
+  #book-container {
+    flex-wrap: wrap;
+  }
+  #exe {
+    left: 23px;
+  }
+  #exr {
+    margin-left: 250px;
+  }
+}
+/* ///////////////////////////////////////////////////// */
+
+@media (max-width: 944px) {
+  #img-1 {
+    display: none;
+  }
+  #img-3 {
+    display: none;
+  }
+  #img-2 {
+    display: none;
+  }
+  .card {
+    width: 250px;
+    height: 200px;
+    background-color: transparent;
+    box-shadow: 1px 1px 15px rgb(211, 209, 209);
+  }
+}
+
+/* ////////////////////////////////////////// */
+@media (max-width: 815px) {
+  .low {
+    font-size: 25px;
+  }
+}
+@media (max-width: 397px) {
+  .banner {
+    width: 100%;
+  }
+
+  #foot-img {
+    display: none;
+  }
+
+  #top-f-r {
+    background-image: none;
+  }
+  .low {
+    display: none;
+  }
+  #offer {
+    display: none;
+  }
+  #tfr-text {
+    font-size: 80px;
+  }
+  #vao {
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+  }
+  #bann1-text {
+    font-size: 12px;
+    height: 50px;
+  }
+  #poster-bann {
+    font-size: 12px;
+  }
+  .text {
+    display: none;
+  }
+  #tfr-text {
+    font-size: 5px;
+  }
+  #tfr {
+    height: 100px;
+  }
+}
+
+@media (max-width: 343px) {
+  #banner3 {
+    height: 110px;
+  }
+  #fta {
+    width: 40%;
+  }
+  #fta-img {
+    width: 50px;
+    height: 50px;
+  }
+  #fta-text {
+    font-size: 12px;
+  }
+  #app {
+    font-size: 20px;
+    text-align: center;
+  }
+  #foot {
+    font-size: 10px;
+  }
+  #foot-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 398px) and (max-width: 495px) {
+  #banner3 {
+    height: 125px;
+  }
+  #banner2 {
+    height: 100px;
+  }
+  .low {
+    display: none;
+  }
+}
